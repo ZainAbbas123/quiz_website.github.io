@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>  Lab Manual 1</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<script>
+	
+	function myfun(){
+
+      var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+		var a = document.getElementById("User_Name").value;
+		if(a == ""){
+          document.getElementById("Message").innerHTML = "Please fill user_name";
+          return false;
+		}
+		if(a.match(decimal)){
+			true;
+			else{
+				document.getElementById("Message1").innerHTML = "d.	The password contains at least 1 integer, 1 alphabet in small letter, 1 alphabet in capital letters and one special character from the following @, #, $, %, &.";
+			}
+		}
+	}
+</script>
+
+<h1> Complete Validation Form</h1>
+<div class="container">
+	<div class="col-lg-8 m-auto d-block">
+
+		<form>
+
+			<div class="form-group">
+				<label> Name</label>
+				<input type="text" id="User_Name" value=""class="form-control" autocomplete="off">
+				<span id="Name"></span>
+			</div>
+
+			<div class="form-group">
+				<label> Password</label>
+				<input type="text" id="Password" value=""class="form-control" autocomplete="off">
+				<span id="password"></span>
+			</div>
+
+			<div class="form-group">
+				<label> Text</label>
+				<input type="text" id="Text" value=""class="form-control" autocomplete="off">
+				<span id="tex"></span>
+			</div>
+
+			<div class="form-group">
+				<label> Comment</label>
+				<input type="text" id="Comment" value=""class="form-control" autocomplete="off">
+				<span id="comment"></span>
+			</div>
+
+           <input type="submit" name="submit" value="Submit"class="btn btn-success"></input>
+
+		</form>
+
+
+</body>
+</html>

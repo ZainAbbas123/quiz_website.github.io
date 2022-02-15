@@ -1,0 +1,198 @@
+<!--      ES6 Topics in 2020
+
+  let & const
+  Template Strings
+  Arrow Function
+  DeStructuring
+  Object Props
+  Default Arguements
+  Arrays in ES6
+  New No. methods
+  New Global Methods
+  -->
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title> ES6 Tutorial </title>
+  </head>
+
+  <body>
+  
+  <script>
+    let firstName = "zain"
+    let lastName = 'abbas';
+
+    // Template tutorials(Template Strings)
+
+       // In ES5
+       console.log("My name is" + firstName + "My last name is" + lastName + ".");
+
+       // In ES6
+       console.log(`My name is ${firstName}. My last name is ${lastName}.`)
+
+        // New Strings Method
+        console.log(`${firstName}`.startsWith('z'));
+        console.log(`${firstName}`.endsWith('n'));
+        console.log(`${firstName}`.includes('zain'));
+        console.log(`${firstName} ${lastName}`.repeat(10));
+
+        const fname = `${firstName}`;
+
+         console.log(`${fname}`.startsWith('z'));
+         console.log(`${fname}`.endsWith('n'));
+         console.log(`${fname}`.includes('zain'));
+         console.log(`${fname} ${lastName}`.repeat(10));
+
+         const fullName = `${firstName}${lastName}`
+         console.log(fullName.repeat(10));
+
+         // Array Destructuring in ES6
+
+//        In ES5
+         const myprong = ['js','php','c++','python','java'];
+      //      var top1 = myprong[0];
+      //   var top2 = myprong[1];
+      //   var top3 = myprong[2];
+      //   console.log("My fav prog lang is" + top1);
+
+         // Now in ES6
+
+        // let[top1,top2,top3,top4,top5] = myprong; 
+        //  console.log("My fav prog lang is" + top1);
+
+          // if i want to print 1st and last index then how can // i
+          let[top1,,,,toplast] = myprong;
+          console.log(`my fav prog is ${top1} and my last${toplast}`); 
+
+
+     //   object Destructuring
+     const biodata = {
+      name:"vinod",
+      age:26,
+      deg: 'MCS',
+      hobb:{
+        first:'playing',
+        sec:'youtube videos'
+      }
+     }
+     console.log(`My name is ${biodata.name}`)
+
+   //    let{name,age,deg} = biodata;
+   //    console.log(`my name is ${biodata.name}`);
+
+     // Second way in object Destructuring
+
+     let{name:myname,age,deg} = biodata;
+     console.log(`my name is ${biodata.name}`);
+
+//   Arrow Function
+
+// In  ES5
+  //  var sum = function(){
+   //    var a = 5;
+   //    var b = 10;
+  //     return a + b;
+  //   }
+  //     console.log(sum());
+
+    // In ES6
+
+  //     const sum = () =>{
+  //    var c = 5;
+ //      var d = 10;
+ //      return c + d;
+ //    }
+ //    console.log(sum());
+
+ // In ES6
+
+let a = 20;
+let b = 30;
+   const sum = () => a+b;
+   console.log(sum());
+
+   // Default Parameters in ES6
+
+// In ES5
+   function mult(a,b){
+     b = (typeof b !== 'undefined' ? b:2)
+     {
+       console.log(a*b);
+     }
+   }
+   mult(4);
+
+   // In ES6
+
+   const mul = (a,b=4)=>{
+    console.log(`The mul of two no is ${a*b}`);
+   }
+   mul(4);
+
+   // Rest Parameters in ES6
+
+   function sum1(...inputs)
+   {
+    console.log(inputs);
+    let total = 0;
+    for(i of inputs){
+      total += i;
+    }
+    console.log(total);
+   }
+      sum1(1,2,3,4,5,6);
+
+// Math Object in ES6
+    // Sign() Method
+    // Trunc() Method
+let number = 5;
+console.log(Math.sign(number));
+
+let number1 = 5.45;
+console.log(Math.trunc(number1));
+
+// New numbers and Global Methods
+// isFinite() Methods
+// isNaN() Methods
+// isInteger() Methods
+
+// Class,objects and inheritence
+
+class students{
+  constructor(name,age,classs){ // Method
+
+    // Properties
+    this.myname = name;
+    this.myage = age;
+    this.myclasss = classs;
+  }
+
+  // instance Method
+   biodata1(){
+    console.log(`Hey class method ${this.myname} ${this.myage}
+      ${this.myclasss}`);
+   }
+}
+
+
+class player extends students{
+constructor(name,age,classs,game){
+  super(name,age,classs);
+  this.mygame = game;
+}
+ biodata1(){
+  console.log(`Hey class method ${this.myname} ${this.myage}
+      ${this.myclasss} I am the player of the game ${this.mygame}`)
+  }
+}
+
+let obj = new students('zain','20','BS');
+let obj1 = new player('zain','20','BS','Football');
+
+obj.biodata1();
+obj1.biodata1();
+       </script>
+
+     </body>
+
+  </html>

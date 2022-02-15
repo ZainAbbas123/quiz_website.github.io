@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+   <body>
+
+
+   	<!--  Everything about Call Back Function-->
+
+     <!-- Event Loop in Javascript -->
+
+
+     <!-- Closure in Javascript -->
+
+<!-- Master the promises in Javascript-->
+
+<!--  Event Loop
+	  Closure
+	  Prototype
+	  Promises & ASYNC/Await
+	-->
+
+           <!-- Promise 3 stage
+
+           	1) Pending
+           	2) resolve
+           	3) reject
+           -->
+
+
+<script>
+	
+	//   hell Callback
+
+  // 1: 2s student roll no
+  //  2; 2s 2nd name and age
+  //  3; 2s gender
+	
+  const getrollno = () =>{
+
+  setTimeout( () => {
+    console.log('API getting roll no')
+    let roll_arr = [1,2,3,4,5];
+    console.log(roll_arr);
+
+    setTimeout( (roll_arr) => {
+      const biodata = {
+      	name: 'zain',
+      	age: '20',
+      }
+      console.log(`My name is ${biodata.name} ${biodata.age}`)
+
+     setTimeout( (name) => {
+       biodata.gender = 'male';
+      console.log(`My name is ${biodata.name} ${biodata.age} ${biodata.gender}`)
+
+      },2000,biodata.name);
+    },2000,roll_arr[1]);
+  },2000);
+
+}
+     getrollno();
+
+	// Master the promises in Javascript--
+
+const probj1 = new Promise( (resolve,reject) =>{
+
+       setTimeout ( () => {
+          let roll_arr1 = [1,2,3,4,5]
+          resolve(roll_arr1);
+        // reject('error while communicating');
+       },2000);
+});
+
+const getbiodata = (indexdata) => {
+	return new Promise( (resolve,reject) => {
+      setTimeout( (indexdata) => {
+         let biodata = {
+         	name:'abbas',
+         	age:'23'
+         }
+         resolve(`My roll no is ${indexdata}.My name is ${biodata.name}`)
+      },2000,indexdata)
+	});
+}
+// When you create a promise object then some methods will call
+     // method.then    and method.catch 
+
+     probj1.then( (roll_arr1) =>{
+        console.log(roll_arr1);
+      return getbiodata(roll_arr1[1]);
+     }).then((kuchbi)=>{
+        console.log(kuchbi);
+     })
+     .catch((error)=>{
+        console.log(error);
+     })
+ </script>
+
+
+<!--  Async Await in Javascript-->
+
+      </body>
+
+</html>

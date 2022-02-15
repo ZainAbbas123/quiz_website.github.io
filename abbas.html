@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<title> Lab 1</title>
+
+    <style>
+        h1 {
+            color: #0000FF;
+        }
+        #select {
+            color: 	#8B008B;
+        }
+        #amount {
+            color: #8B008B;
+        }
+         .Round-box {
+            display:inline-block;
+            border: 3px solid blue;
+            border-radius:10px;
+            color:#0000FF;
+        }
+        #chosen{
+              color: #8B008B;
+        }
+        #chosen1{
+              color: #8B008B;
+        }
+        .Round-box1{
+            display:inline-block;
+            border: 3px solid blue;
+            border-radius:10px;
+            color:#0000FF;
+        }
+        #chosen2{
+              color: #8B008B;
+        }
+        #chosen3{
+              color: #8B008B;
+        }
+        #chosen4{
+              color: #8B008B;
+        }
+        .Round-box2{
+            display:inline-block;
+            border: 3px solid red;
+            box-shadow: 2px red;
+            border-radius:10px;
+            color:	#FF0000;
+        }
+    </style>
+
+
+          <script type="text/javascript">
+              var x;
+              var x1;
+              var currency;
+              var x2;
+              var x3;
+              
+              function getSelectValue() {
+                  currency = document.getElementById("list").value;
+                  console.log(currency);
+              }
+
+              function getInputValue() {
+                  x = document.getElementById("name1").value;
+                  document.getElementById("name1").value = x;
+                  console.log(x);
+              }
+
+              function Conversion() {
+                  if (currency == "Dollar") {
+                      x1 = 166 / x;
+                      document.getElementById("Text1").value = x1;
+                  }
+                  if (currency == "Pound") {
+                      x1 = 212 / x;
+                      document.getElementById("Text1").value = x1;
+                  }
+                  if (currency == "Riyal") {
+                      x1 = 44 / x;
+                      document.getElementById("Text1").value = x1;
+                  }
+
+              }
+
+              function getInputValue1(){
+                   x2 = document.getElementById("name2").value;
+                  document.getElementById("name2").value = x2;
+                 // document.write(x2);
+              }
+              function Conversion1(){
+              	if (currency == "Dollar") {
+                      x3 = 166 * x2;
+                      console.log(x3);
+                      document.getElementById("Text3").value = x3;
+                  }
+                  if (currency == "Pound") {
+                      x3 = 212 * x2;
+                      document.getElementById("Text3").value = x3;
+                  }
+                  if (currency == "Riyal") {
+                      x3 = 44 * x2;
+                      document.getElementById("Text3").value = x3;
+                  }
+              }
+
+              function Reset(){
+              	document.getElementById('name1').value = "";
+              	document.getElementById('Text1').value = "";
+              	document.getElementById('name2').value = "";
+              	document.getElementById('Text3').value = "";
+              	document.getElementById('name3').value = currency;
+                   
+                   var x5 = "18L-2161";
+                   var x6 = "zain";
+                   var res = x5.concat(x6);
+                  document.getElementById('name4').value = res;
+              }
+          </script>
+
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+ 
+        <h1>Currency Converting Website</h1>
+
+        <div id="select"> Select Currency Medium</div>
+            
+        <select id="list" onchange="getSelectValue();">
+               <option value="None">Select</option>
+              <option value="Dollar">Dollar</option>
+              <option value="Pound">Pound</option>
+              <option value="Riyal">Riyal</option>
+        </select>
+        
+
+             <!-- Enter amount in rupees-->
+       <div id="amount">Please enter amount in rupees to convert to your selected medium
+           <input type="text" id="name1"value=""onchange="getInputValue();"> 
+       </div>
+      
+          <br />
+          <br />
+
+        
+         <button class="Round-box"type="submit" onclick="Conversion();">Convert Rupees to selected Medium</button>
+
+        
+        <div id="chosen">Amount from rupees from your chosen medium
+          <input type="text" id="Text1"value="">
+       </div>
+        
+        <br />
+
+
+              <!-- 2nd Conversion-->
+
+        <div id="chosen1"> Please enter amount in your chosen medium to convert to rupees
+          <input type="text" id="name2"value=""onchange="getInputValue1();">
+       </div>
+
+
+         <button class="Round-box1"type="submit" onclick="Conversion1();">Convert from selected medium to rupees</button>
+
+         <div id="chosen2">Amount from your chosen medium to rupees
+          <input type="text" id="Text3"value="">
+       </div>
+
+         <!-- your previous chosen medium-->
+
+         <div id="chosen3"> Your previous chosen medium
+          <input type="text" id="name3"value=""onchange="getPrevious();">
+       </div>
+
+                <br/>
+             <div id="chosen4"> Programmed By
+          <input type="text" id="name4"value="">
+       </div>
+          <br/>
+       <!-- Reset-->
+       <button class="Round-box2"type="submit" onclick="Reset();">Reset</button>
+    </form>
+</body>
+
+</html>

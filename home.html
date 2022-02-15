@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box
+}
+body {
+  font-family: Verdana, sans-serif; margin:0
+}
+.mySlides {
+  display: none
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+{
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  } 
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  } 
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (
+  max-width: 300px
+  ) {
+  .prev, .next,.text {
+    font-size: 11px
+  }
+}
+
+
+.power{
+  width:400px;
+  height: 200px;
+  background: black;
+  color: #fff;
+  padding: 50px;
+
+}
+.social{
+  margin-left: 10px;
+  margin-top: 1%;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  height: 20px;
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="zain3.jpeg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="zain4.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="zain5.jpeg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<h1 style="text-align: center;">     Our Perception and Reality  </h1>
+<p  style="text-align: center;"> .We can't make consistency in our efforts.As a result,we anticipate that our future should be acceptable without assurance and self mental fortitude yet that thing will make you an uncouth individual but reality is 
+success is what happens when somebody/something is able to use their own skills, physical ability and knowledge in combination with what they have access to within their environment to produce a result that has a positive effect on their life and the environment around them</p>
+<h2 style="text-align: center;"style="font-size: 90px;">    What You can do?  </h2>
+<ul>
+  <li> Know that your past does not define your future.</li>
+  <li> Learn from your mistakes..</li>
+  <li> Move on.</li>
+  <li> Living Your Values</li>
+  <li> Define your values</li>
+  <li> Set your goals.</li>
+  <li> Question yourself. </li>
+  <li> Lead a healthy lifestyle.</li>
+  <li> Make Consistency in your Efforts</li>
+  <li> Working Smarter (Not Harder)</li>
+  <li> Take time to relax.</li>
+  <li> Build a network</li>
+</ul>
+
+<div class="power">
+  <h3 style="text-align: center;"style="font-size:5vw;"> Powered By ZamanGroup</h3>
+</div>
+
+
+<div class="social">
+    <a href="https://www.facebook.com/profile.php?id=100032320963528" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/ZainAbb82695082?s=09" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/zainabbas_nuces/" class="fa fa-instagram"></a>
+    <a href="https://www.youtube.com/channel/UCLPK3fToO8qYOFsG-A0eeQg" class="fa fa-youtube"></a>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) 
+    {
+      slideIndex = 1
+    }    
+  if (n < 1) 
+  {
+    slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) 
+  {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) 
+  {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 

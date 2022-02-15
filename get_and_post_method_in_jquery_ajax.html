@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+   <body>
+         <div class="container">
+         	<p id="changehere"> This line is going</p>
+         	<button class="btn btn-primary btnclick"> click</button>
+         </div>
+
+         <script>
+         	
+         	// For get Method
+
+         	$(document).ready(function(){
+              $('.btnclick').click(function(){
+                $.get('load.html',function(data,status){
+                  $('#changehere').html(data);
+                  alert(status);
+                });
+              });
+         	});
+
+            //  for post method
+
+            $(document).ready(function(){
+              $('.btnclick').click(function(){
+
+              	});
+              });
+         </script>
+     </body>
+
+</html>
